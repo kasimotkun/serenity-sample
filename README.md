@@ -19,7 +19,7 @@ src
 ```
 
 ### Add a new scenario
-Go to `src/resources/features.search/post_product.feature` and add your BDD steps
+Go to `src/test/resources/features.search/post_product.feature` and add your BDD steps
 ```Gherkin
 
   Scenario: Searching for Mango term
@@ -28,7 +28,7 @@ Go to `src/resources/features.search/post_product.feature` and add your BDD step
 ```
 
 ### The Step Definitions implementation
-Go to `src/java/starter/stepdefinitions/SeachStepDefinitions.java` file and add your step definition methods per your BDD steps in your feature scenarios
+Go to `src/test/java/starter/stepdefinitions/SeachStepDefinitions.java` file and add your step definition methods per your BDD steps in your feature scenarios
 ```java
 
      @Then("he sees the results displayed for {string}")
