@@ -10,7 +10,7 @@ cache:
 test:
   stage: test
   script:
-    - mvn surefire-report:report
+    - mvn clean surefire-report:report
   artifacts:
     when: always
     paths:
