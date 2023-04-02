@@ -1,6 +1,5 @@
 image: maven:3.6.3-adoptopenjdk-15
 stages:
-  - build
   - test
 
 cache:
@@ -8,20 +7,14 @@ cache:
     - .m2/
 
 
-build:
-  stage: build
-  script: mvn compile -Dmaven.test.skip=true
-
 test:
   stage: test
   script:
-    - apt-get update
-    - mvn test
+    - mvn surefire-report:report
   artifacts:
     when: always
     paths:
-      - target/surefire-reports/*.txt
-      - target/surefire-reports/*.xml
+      - target/site/surefire-report.html
     reports:
       junit:
         - target/surefire-reports/*.xml
