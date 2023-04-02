@@ -18,4 +18,3 @@ test:
     reports:
       junit:
         - target/surefire-reports/*.xml
-  needs: ["build"]
