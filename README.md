@@ -6,7 +6,7 @@ Go to the project directory and run this command
 $ mvn clean surefie-report:report
 ```
 ### The project directory structure
-The project has build scripts for Maven, and follows the standard directory structure used in most Serenity projects:
+The project has build scripts for both Maven and Gradle, and follows the standard directory structure used in most Serenity projects:
 ```Gherkin
 src
   + main
@@ -19,7 +19,7 @@ src
 ```
 
 ### Add a new scenario
-Go to `src/test/resources/features.search/post_product.feature` and add your BDD steps
+Go to `src/resources/features.search/post_product.feature` and add your BDD steps
 ```Gherkin
 
   Scenario: Searching for Mango term
@@ -28,7 +28,7 @@ Go to `src/test/resources/features.search/post_product.feature` and add your BDD
 ```
 
 ### The Step Definitions implementation
-Go to `src/test/java/starter/stepdefinitions/SeachStepDefinitions.java` file and add your step definition methods per your BDD steps in your feature scenarios
+Go to `src/java/starter/stepdefinitions/SeachStepDefinitions.java` file and add your step definition methods per your BDD steps in your feature scenarios
 ```java
 
      @Then("he sees the results displayed for {string}")
@@ -38,17 +38,8 @@ Go to `src/test/java/starter/stepdefinitions/SeachStepDefinitions.java` file and
      }
 ```
 ### Reports
-I used surefire report plugin for html and xml reports. You can find the surefire-report.html report under `target/site/`
-You can find the test results in the GitLab Pipelines under the executed pipeline's test report section.
-
-### Refactored Items
-I decided to use only Maven as build automation tool and Surefire to execute tests. 
-I am good experienced in these tools so that I selected these ones  and removed Gradle files from the project and didn't use failsafe plugin.
-As well as, I didn't prefer to pass the test if any test fails. 
-
-I refactored the stepdefinition java methods to fix the bugs and optimize the steps
-I added new 2 scenarios to cover remaining 2 enpoints and verify them.
-I added and configured the .gitlab-ci.yml file to run the tests in a CI/CD pipeline.
+  I used surefire report plugin for html and xml reports. You can find the surefire-report.html report under `target/site/`
+  
 
 ### Additional Info
-Please read `README_OF_STARTERS.md` file in the project to learn more about SERENITY and CUCUMBER frameworks.
+Please read README_OF_STARTERS.md file in the project to learn more about SERENITY and CUCUMBER frameworks.
