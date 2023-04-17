@@ -56,6 +56,3 @@ Go to `src/java/starter/stepdefinitions/StepDefinitions.java` file and add your 
 ### Reports
   Serenity has html and xml reports. You can find the report under `target/site/serenity`
   
-
-### Additional Info
-Please read README_OF_STARTERS.md file in the project to learn more about SERENITY and CUCUMBER frameworks.
