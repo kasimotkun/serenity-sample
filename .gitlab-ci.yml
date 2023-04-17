@@ -10,11 +10,11 @@ cache:
 test:
   stage: test
   script:
-    - mvn clean surefire-report:report
+    - mvn test
   artifacts:
     when: always
     paths:
-      - target/site/surefire-report.html
+      - target/site/serenity/*.html
     reports:
       junit:
-        - target/surefire-reports/*.xml
+        - target/site/serenity/SERENITY-JUNIT-*.xml
