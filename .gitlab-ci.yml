@@ -1,4 +1,4 @@
-image: maven:3.6.3-adoptopenjdk-15
+image: markhobson/maven-chrome:jdk-11
 stages:
   - test
 
@@ -14,7 +14,7 @@ test:
   artifacts:
     when: always
     paths:
-      - target/site/serenity/*.html
+      - target/site/serenity/*
     reports:
       junit:
         - target/site/serenity/SERENITY-JUNIT-*.xml

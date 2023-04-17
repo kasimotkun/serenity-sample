@@ -33,7 +33,7 @@ public class PayWithCard extends UIInteractionSteps {
         $(PaymentForm.ZIP_FIELD).clear();
         $(PaymentForm.ZIP_FIELD).sendKeys("IG93DD");
         $(PaymentForm.PAY_BTN).click();
-        Thread.sleep(10000);
+        Thread.sleep(20000);
         getDriver().switchTo().parentFrame();
 
     }
